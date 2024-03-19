@@ -12,5 +12,4 @@ RUN apt-get install -y net-tools
 EXPOSE 8080:80
 
 # Run the Nginx server
-ENTRYPOINT service nginx start && bash
-~                                        
+ENTRYPOINT service nginx start && bash                                        
