@@ -27,7 +27,7 @@ pipeline {
 			}}
 			stage('Container creation'){
 		    steps {
-			sh 'docker run -it -d --name=con-pipeline nidhikashyap18/pipeline-image1 /bin/bash'
+			sh 'docker run -it -d --name=con-pipeline1 nidhikashyap18/pipeline-image1 /bin/bash'
 			}}
 			stage('Build and Push Docker Image') {
             steps {
