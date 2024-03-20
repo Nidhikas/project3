@@ -31,10 +31,10 @@ pipeline {
                     }
                     
                     // Tag the Docker image
-                    sh 'docker tag nidhikashyap18/pipeline-image-1 nidhikashyap18/pipeline-image-1'
+                    sh 'docker tag nidhikashyap18/pipeline-image-1 nginx-image'
                     
                     // Push the Docker image to Docker Hub
-                    sh 'docker push nidhikashyap18/pipeline-image-1'
+                    sh 'docker push nginx-image'
                 }
             }
         }		
