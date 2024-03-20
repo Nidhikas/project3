@@ -23,7 +23,7 @@ pipeline {
 			}}
 			stage('Docker build'){
 		    steps {
-			sh 'docker build -t nidhikashyap18/pipeline-image1 .'
+			sh 'docker build -t nidhikashyap18/pipeline-image2 .'
 			}}
 			stage('Container creation'){
 		    steps {
