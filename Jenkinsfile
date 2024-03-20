@@ -2,9 +2,9 @@ pipeline {
 	agent any
 
 	environment {
-        DOCKER_REGISTRY = "nidhikashyap18"
+        DOCKER_REGISTRY = "nidhikashyap18/pipeline-image2"
         DOCKER_CREDENTIAL_ID = 'dockerhub_id'
-        DOCKER_IMAGE_NAME = 'nidhikashyap18/pipeline-image1'
+        DOCKER_IMAGE_NAME = 'nidhikashyap18/pipeline-image2'
     }
 	
 	stages {
@@ -27,7 +27,7 @@ pipeline {
 			}}
 			stage('Container creation'){
 		    steps {
-			sh 'docker run -it -d --name=con-pipeline1 nidhikashyap18/pipeline-image1 /bin/bash'
+			sh 'docker run -it -d --name=con-pipeline2 nidhikashyap18/pipeline-image2 /bin/bash'
 			}}
 			stage('Build and Push Docker Image') {
             steps {
