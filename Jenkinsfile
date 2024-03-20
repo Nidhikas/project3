@@ -4,7 +4,7 @@ pipeline {
 	environment {
         DOCKER_REGISTRY = "https://hub.docker.com/repositories/nidhikashyap18"
         DOCKER_CREDENTIAL_ID = 'dockerhub_id'
-        DOCKER_IMAGE_NAME = 'nidhikashyap18/pipeline-image2'
+        DOCKER_IMAGE_NAME = 'nidhikashyap18/pipeline-image3'
     }
 	
 	stages {
@@ -23,11 +23,11 @@ pipeline {
 			}}
 			stage('Docker build'){
 		    steps {
-			sh 'docker build -t nidhikashyap18/pipeline-image2 .'
+			sh 'docker build -t nidhikashyap18/pipeline-image3 .'
 			}}
 			stage('Container creation'){
 		    steps {
-			sh 'docker run -it -d --name=con-pipeline2 nidhikashyap18/pipeline-image2 /bin/bash'
+			sh 'docker run -it -d --name=con-pipeline3 nidhikashyap18/pipeline-image3 /bin/bash'
 			}}
 			stage('Build and Push Docker Image') {
             steps {
