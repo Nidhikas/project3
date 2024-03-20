@@ -2,7 +2,7 @@ pipeline {
 	agent any
 
 	environment {
-        DOCKER_REGISTRY = "nidhikashyap18/pipeline-image2"
+        DOCKER_REGISTRY = "https://hub.docker.com/repositories/nidhikashyap18"
         DOCKER_CREDENTIAL_ID = 'dockerhub_id'
         DOCKER_IMAGE_NAME = 'nidhikashyap18/pipeline-image2'
     }
