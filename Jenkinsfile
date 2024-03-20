@@ -32,8 +32,8 @@ pipeline {
 			stage('Build and Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry(nidhikashyap18, dockerhub_id) {
-                        def customImage = docker.build(nidhikashyap18/pipeline-image1)
+                    docker.withRegistry(DOCKER_REGISTRY, DOCKER_CREDENTIAL_ID) {
+                        def customImage = docker.build(DOCKER_IMAGE_NAME)
                         customImage.push()
                     }
                 }
